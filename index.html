@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#102a43" />
+  <title>ContaNexo | Estudos Contábeis</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="login-view" class="auth-shell">
+    <section class="auth-hero">
+      <div class="brand-mark">CN</div>
+      <p class="eyebrow">CONTA NEXO</p>
+      <h1>Seu escritório de estudos contábeis, agora no navegador.</h1>
+      <p class="muted hero-copy">Acompanhe sua evolução, pratique casos reais e mantenha seu progresso separado por aluno.</p>
+      <div class="hero-points"><span>50 níveis</span><span>Ranking</span><span>Casos profissionais</span></div>
+    </section>
+    <section class="auth-card">
+      <p class="eyebrow">ACESSO INDIVIDUAL</p>
+      <h2>Entrar no ContaNexo</h2>
+      <p class="muted">Nesta cópia de desenvolvimento, o login funciona localmente. O banco online será conectado na etapa de publicação.</p>
+      <form id="login-form">
+        <label for="email">E-mail</label>
+        <input id="email" type="email" autocomplete="username" placeholder="aluno@contanexo.local" required />
+        <label for="password">Senha</label>
+        <input id="password" type="password" autocomplete="current-password" placeholder="Digite sua senha" required />
+        <button class="primary full" type="submit">Entrar</button>
+      </form>
+      <div class="demo-note"><strong>Conta de demonstração</strong><br />aluno@contanexo.local · contanexo123</div>
+      <p id="login-error" class="error" role="alert"></p>
+    </section>
+  </div>
+
+  <div id="app-view" class="app-shell hidden">
+    <aside class="sidebar">
+      <div class="brand"><div class="brand-mark small">CN</div><div><strong>ContaNexo</strong><span>Estudos contábeis</span></div></div>
+      <div class="profile-mini"><div class="avatar">A</div><div><strong id="student-name">Aluno</strong><span id="student-level">Nível 1</span></div></div>
+      <nav id="main-nav" aria-label="Navegação principal">
+        <button class="nav-item active" data-page="dashboard">⌂ <span>Visão geral</span></button>
+        <button class="nav-item" data-page="wallet">▣ <span>Minha carteira</span></button>
+        <button class="nav-item" data-page="cases">◈ <span>Casos profissionais</span></button>
+        <button class="nav-item" data-page="cfc">✓ <span>Simulado CFC</span></button>
+        <button class="nav-item" data-page="mei">▤ <span>Simulador MEI</span></button>
+        <button class="nav-item" data-page="ranking">♛ <span>Ranking</span></button>
+      </nav>
+      <div class="sidebar-bottom"><span class="online-dot"></span> Ambiente de desenvolvimento<br /><button id="logout" class="logout">Sair da conta</button></div>
+    </aside>
+    <main class="main-content">
+      <header class="topbar"><div><p class="eyebrow" id="page-eyebrow">PAINEL DO ALUNO</p><h1 id="page-title">Visão geral</h1></div><div class="top-actions"><span class="sync-pill">● Local — pronto para sincronizar</span><button class="avatar top-avatar" id="top-avatar">A</button></div></header>
+      <div id="content" class="content"></div>
+    </main>
+  </div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
